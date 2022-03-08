@@ -1,0 +1,7 @@
+node_modules
+build
+coverage
+documentation
+package.json
+package-lock.json
+karma.conf.js
