@@ -14,7 +14,7 @@
         "dependency-graph": "npx ngd -p tsconfig.doc.json -o",
         "source-map": "source-map-explorer dist/**/*.js",
         "prepare": "husky install",
-        "add-hook-pre-commit": "npx husky add .husky/pre-commit \"npm run format-code && npm run fix-code\" && git add .husky/pre-commit"
+        "add-hook-pre-commit": "npx husky add .husky/pre-commit \"npm run format-code && npm run fix-code && git add -A\" && git add .husky/pre-commit"
     },
     "private": true,
     "dependencies": {

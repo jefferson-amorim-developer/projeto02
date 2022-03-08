@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-npm run format-code && npm run fix-code
+npm run format-code && npm run fix-code && git add -A
