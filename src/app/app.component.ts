@@ -11,8 +11,9 @@ export class AppComponent {
     constructor() {}
 
     hello(content: any): any {
-        console.log(`hello ${content}`);
-        console.log('world');
-        return content;
+console.log(`hello ${content}`);
+console.log("world");
+
+return content;
     }
 }
