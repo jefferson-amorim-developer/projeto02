@@ -12,7 +12,9 @@
         "fix-code": "npx eslint \"./src/**/*{.ts,.html}\" --fix",
         "documentation": "npx compodoc -p tsconfig.doc.json",
         "dependency-graph": "npx ngd -p tsconfig.doc.json -o",
-        "source-map": "source-map-explorer dist/**/*.js"
+        "source-map": "source-map-explorer dist/**/*.js",
+        "prepare": "husky install",
+        "add-hook-pre-commit": "npx husky add .husky/pre-commit \"npm run format-code && npm run fix-code\" && git add .husky/pre-commit"
     },
     "private": true,
     "dependencies": {
@@ -58,10 +60,5 @@
         "prettier": "^2.5.1",
         "source-map-explorer": "^2.5.2",
         "typescript": "~4.5.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run format-code && npm run fix-code"
-        }
     }
 }
